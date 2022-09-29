@@ -44,15 +44,15 @@ struct YourRequest {
 }
 
 extension YourRequest: HTTPRequest {
-    typealias DecodableType = [YourModel]
-    
-    var path: String { "web/home/list" }
-    
-    var parameterEncoding: ParameterEncoding? { URLEncoding.default }
-    
-    var parameters: Parameters? {
-        ["userId": "xxx"]
-    }
+  typealias DecodableType = YourModel
+  
+  var path: String { "web/home/list" }
+  
+  var parameterEncoding: ParameterEncoding? { URLEncoding.default }
+  
+  var parameters: Parameters? {
+    ["userId": "xxx"]
+  }
 }
 ```
 
@@ -86,14 +86,6 @@ let responses = await [response1, response2]
       .package(url: "https://github.com/douking/HTTPClient", from: "0.1.0"),
     ]
   )
-  ```
-
-- **Using Cocoapods**
-  
-  Add this line to your podfile
-
-  ```ruby
-  pod 'HTTPClient'
   ```
 
 ### LICENES

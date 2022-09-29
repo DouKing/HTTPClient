@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/douking/HTTPClient.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
+  s.swift_version = '5.6'
 
   s.source_files = 'Source/**/*'
   s.public_header_files = 'Source/HTTPClient.h'
